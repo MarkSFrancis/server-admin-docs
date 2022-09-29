@@ -1,0 +1,4 @@
+/* Optimised for NodeJs 16.x */
+{
+  "extends": "@tsconfig/node16/tsconfig.json"
+}

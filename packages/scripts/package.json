@@ -1,0 +1,23 @@
+{
+  "name": "@server-admin/cli",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "watch": "nodemon src/index.ts",
+    "build": "tsc",
+    "test": "jest --changedSince main",
+    "test:all": "jest"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
+  }
+}
