@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/MarkSFrancis/server-admin-docs/tree/main/',
+            'https://github.com/MarkSFrancis/server-admin-docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/MarkSFrancis/server-admin-docs/tree/main/',
+            'https://github.com/MarkSFrancis/server-admin-docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
