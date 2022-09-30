@@ -1,0 +1,112 @@
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# File share
+
+## Linux
+
+On Linux, I use a [CIFS](https://www.wikiwand.com/en/Server_Message_Block#CIFS) share to allow any Linux distro to connect.
+
+### Install
+
+You may need to install a few utilities, though most distros include these out-of-the-box.
+
+:::note Installation
+
+- This will install `cifs-utils` using `apt`
+- If you're not using Debian or Ubuntu, you may need to run something different. Check your distro's package manager for details
+- This command will do nothing if you already have the latest versions of the utilities installed
+
+```bash
+sudo apt-get update
+sudo apt-get install cifs-utils
+```
+
+:::
+
+### Configure
+
+To connect to it, you'll need a couple of configuration files:
+
+<Tabs>
+<TabItem value="/etc/fstab">
+
+```bash
+# /etc/fstab: static file system information.
+#
+# Add this to the bottom of your config file, or create a new one if you don't already have one
+//192.168.0.2/tank /mnt/tank cifs credentials=/etc/cifs-credentials,file_mode=0777,dir_mode=0777
+```
+
+</TabItem>
+<TabItem value="/etc/cifs-credentials">
+
+```bash
+username=mark
+password={YOUR_PASSWORD_HERE}
+```
+
+</TabItem>
+</Tabs>
+
+You'll also need to create the mount point:
+
+```bash
+sudo mkdir /mnt/tank
+```
+
+### Run
+
+Once you've got `cifs-utils` installed and you've configured the share, run this to reload your `fstab` config:
+
+```
+sudo mount -a
+```
+
+You should find your new share mounted in `/mnt/tank`!
+
+## Windows
+
+For Windows, I use a [SMB](https://www.wikiwand.com/en/Server_Message_Block) share. These can be connected to via the GUI on Windows.
+
+The server should be listed in your `Network` view (in Windows Explorer), listed as `FREENAS`. If you cannot see it, then your network may be misconfigured.
+
+Once you've opened that, you should see a single folder called `tank`. You can open it to navigate the items in the share, or right-click, and `Map network drive..` to map it to a drive letter (such as `Z:\`)
+
+## WSL
+
+For WSL, I recommend that you first connect to the share on the host Windows machine. After that, we'll be using [drvfs](https://learn.microsoft.com/en-us/windows/wsl/file-permissions), which is a virtual file system built to connect WSL to your Windows files. You're already using it on `/mnt/c`!
+
+### Configure
+
+To connect to it, you'll need to configure `fstab`:
+
+```bash title="/etc/fstab"
+# /etc/fstab: static file system information.
+#
+# Add this to the bottom of your config file, or create a new one if you don't already have one
+# This example assumes your drive is mapped under `Z:`. If it's not, replace any `z` with your drive's letter
+Z: /mnt/z drvfs defaults 0 0
+```
+
+You'll also need to create the mount point:
+
+```bash
+sudo mkdir /mnt/z
+```
+
+### Run
+
+Once you've configured the share, run this to reload your `fstab` config:
+
+```
+sudo mount -a
+```
+
+You should find your new share mounted in `/mnt/z`!
+
+## Web
+
+I've also added [FileBrowser](https://filebrowser.nas.place/) to exeggcute that's pointing at the share, so that you can browse the file share via your browser.
+
+You will need a username and password to connect to it.

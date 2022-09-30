@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Docker
 
 I'm using [Docker Compose](https://docs.docker.com/compose/) to manage my running apps on my server. You can find the config I'm using on [GitHub](https://github.com/MarkSFrancis/docker-config).
