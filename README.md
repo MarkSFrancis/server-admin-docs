@@ -1,3 +1,9 @@
+# Server Admin
+
+Docs for managing my home server
+
+[![Actions Status](https://github.com/MarkSFrancis/server-admin-docs/workflows/Build/badge.svg)](https://github.com/MarkSFrancis/server-admin-docs/actions/workflows/build.yml)
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
