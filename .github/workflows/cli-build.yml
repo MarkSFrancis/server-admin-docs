@@ -1,9 +1,15 @@
-name: Build
+name: CLI Build
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'packages/cli/**'
+
+defaults:
+  run:
+    working-directory: packages/cli
 
 jobs:
   build:
@@ -14,7 +20,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
       - name: Install dependencies
         run: yarn --frozen-lockfile --non-interactive
       - name: Build
