@@ -117,3 +117,17 @@ dist
 
 # Build output
 dist/
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Production
+/build
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

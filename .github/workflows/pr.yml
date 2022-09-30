@@ -1,13 +1,6 @@
-name: CLI PR
+name: PR
 
-on:
-  pull_request:
-    paths:
-      - 'packages/cli/**'
-
-defaults:
-  run:
-    working-directory: packages/cli
+on: pull_request
 
 jobs:
   build:
@@ -23,5 +16,3 @@ jobs:
         run: yarn --frozen-lockfile --non-interactive
       - name: Build
         run: yarn build
-      - name: Test
-        run: yarn test:all

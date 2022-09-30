@@ -1,9 +1,7 @@
-/* Optimised for NodeJs 16.x */
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist"
-  },
-  "include": ["packages/**/*"],
-  "exclude": ["node_modules"]
+    "baseUrl": "."
+  }
 }

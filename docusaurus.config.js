@@ -17,7 +17,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MarkSFrancis', // Usually your GitHub org/user name.
-  projectName: 'server-admin', // Usually your repo name.
+  projectName: 'server-admin-docs', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/MarkSFrancis/server-admin/tree/main/packages/docs/',
+            'https://github.com/MarkSFrancis/server-admin-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/MarkSFrancis/server-admin/tree/main/packages/docs/',
+            'https://github.com/MarkSFrancis/server-admin-docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -71,7 +71,7 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/MarkSFrancis/server-admin',
+            href: 'https://github.com/MarkSFrancis/server-admin-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -98,7 +98,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/MarkSFrancis/server-admin',
+                href: 'https://github.com/MarkSFrancis/server-admin-docs',
               },
             ],
           },

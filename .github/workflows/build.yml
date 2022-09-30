@@ -1,15 +1,9 @@
-name: CLI Build
+name: Build
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'packages/cli/**'
-
-defaults:
-  run:
-    working-directory: packages/cli
 
 jobs:
   build:
@@ -25,5 +19,3 @@ jobs:
         run: yarn --frozen-lockfile --non-interactive
       - name: Build
         run: yarn build
-      - name: Test
-        run: yarn test:all
