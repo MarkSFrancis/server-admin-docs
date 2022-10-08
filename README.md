@@ -2,9 +2,7 @@
 
 Docs for managing my home server
 
-[![Actions Status](https://github.com/MarkSFrancis/server-admin-docs/workflows/Build/badge.svg)](https://github.com/MarkSFrancis/server-admin-docs/actions/workflows/build.yml)
-
-This repository is the source code for [this site]() (// TODO)
+This repository is the source code for [this site](https://server-admin-docs.vercel.app/)
 
 ## Contributing
 
