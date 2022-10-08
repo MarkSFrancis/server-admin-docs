@@ -1,0 +1,19 @@
+import { RemoteCodeBlock } from '@site/src/components/RemoteCodeBlock/RemoteCodeBlock'
+
+# Docker
+
+I'm using [Docker Compose](https://docs.docker.com/compose/) to manage my running apps on my server. I store all my docker config on [GitHub](https://github.com/MarkSFrancis/docker-config).
+
+That repository also includes a script to update the host's linux runtime and all containers.
+
+<RemoteCodeBlock
+  language="bash"
+  title="/up.sh"
+  url="https://raw.githubusercontent.com/MarkSFrancis/docker-config/main/up.sh"
+/>
+
+:::caution
+The setup I've used does not automatically install updates. This is to reduce unexpected downtime due to breaking changes in updates.
+
+As a tradeoff, you **must** manually (and reguarly) update both the docker containers and the server itself. Failure to do so may introduce vulnerabilities.
+:::
