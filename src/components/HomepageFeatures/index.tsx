@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
         <a
           target="_blank"
           rel="noreferrer noopener"
-          href="http://192.168.0.3:8006/"
+          href="https://filebrowser.nas.place/"
         >
           FileBrowser
         </a>
