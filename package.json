@@ -29,7 +29,7 @@
     "react-query": "^3.39.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.0.0",
+    "@docusaurus/module-type-aliases": "3.0.1",
     "@tsconfig/docusaurus": "^2.0.2",
     "@types/jest": "^27.5.0",
     "@types/node": "^20",
