@@ -1,6 +1,6 @@
 import { errToString } from '@site/src/lib/errToString'
-import React, { ReactElement, ReactNode } from 'react'
-import { UseQueryResult } from 'react-query'
+import React, { type ReactElement, type ReactNode } from 'react'
+import { type UseQueryResult } from '@tanstack/react-query'
 import Admonition from '@theme/Admonition'
 
 export interface QueryGuardProps<T = unknown> {

@@ -35,11 +35,11 @@ To connect to it, you'll need a couple of configuration files:
 # /etc/fstab: static file system information.
 #
 # Add this to the bottom of your config file, or create a new one if you don't already have one
-//192.168.0.2/tank /mnt/tank cifs credentials=/etc/cifs-credentials,file_mode=0777,dir_mode=0777
+//192.168.0.2/tank /mnt/tank cifs uid=1000,gid=0,credentials=/home/mark/tank-share-credentials,iocharset=utf8 0 0
 ```
 
 </TabItem>
-<TabItem value="/etc/cifs-credentials">
+<TabItem value="/home/mark/tank-share-credentials">
 
 ```bash
 username=mark
@@ -54,6 +54,8 @@ You'll also need to create the mount point:
 ```bash
 sudo mkdir /mnt/tank
 ```
+
+To find out more about these configuration values, check out the [Ubuntu guide to mounting shares](https://wiki.ubuntu.com/MountWindowsSharesPermanently)
 
 ### Run
 
