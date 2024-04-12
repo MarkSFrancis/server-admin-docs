@@ -1,6 +1,6 @@
 import axios from 'axios'
-import React, { FC } from 'react'
-import { useQuery } from 'react-query'
+import React, { type FC } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import CodeBlock from '@theme/CodeBlock'
 import { QueryGuard } from '../QueryGuard/QueryGuard'
 
@@ -12,10 +12,10 @@ export interface RemoteCodeBlockProps {
 }
 
 export const RemoteCodeBlock: FC<RemoteCodeBlockProps> = (props) => {
-  const state = useQuery(
-    ['github-file', props.url],
-    async () => await axios.get<string>(props.url)
-  )
+  const state = useQuery({
+    queryKey: ['github-file', props.url],
+    queryFn: async () => await axios.get<string>(props.url),
+  })
 
   return (
     <QueryGuard state={state}>
