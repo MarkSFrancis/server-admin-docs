@@ -1,5 +1,6 @@
 export const errToString = (err: unknown): string => {
   if (typeof err === 'string') return err
+  if (err === null || err === undefined) return 'Error'
   if (typeof err === 'object') {
     if ('message' in err) return (err as Error).message
 
