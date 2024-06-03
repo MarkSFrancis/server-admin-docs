@@ -30,7 +30,7 @@
     "vitest": "^1.6.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2",
+    "@docusaurus/module-type-aliases": "3.4.0",
     "@docusaurus/tsconfig": "^3.4.0",
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
