@@ -1,6 +1,6 @@
-import { themes as prismThemes } from 'prism-react-renderer'
-import type { Config } from '@docusaurus/types'
-import type * as Preset from '@docusaurus/preset-classic'
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Server Admin',
@@ -104,6 +104,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   },
-}
+};
 
-export default config
+export default config;

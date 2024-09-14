@@ -1,14 +1,14 @@
-import React from 'react'
-import clsx from 'clsx'
-import styles from './styles.module.css'
-import MountainIcon from '@site/static/img/undraw_docusaurus_mountain.svg'
-import TreeIcon from '@site/static/img/undraw_docusaurus_tree.svg'
-import ReactIcon from '@site/static/img/undraw_docusaurus_react.svg'
+import React from 'react';
+import clsx from 'clsx';
+import styles from './styles.module.css';
+import MountainIcon from '@site/static/img/undraw_docusaurus_mountain.svg';
+import TreeIcon from '@site/static/img/undraw_docusaurus_tree.svg';
+import ReactIcon from '@site/static/img/undraw_docusaurus_react.svg';
 
 interface FeatureItem {
-  title: string
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>
-  description: JSX.Element
+  title: string;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  description: JSX.Element;
 }
 
 const FeatureList: FeatureItem[] = [
@@ -60,7 +60,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-]
+];
 
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
@@ -73,7 +73,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export function HomepageFeatures(): JSX.Element {
@@ -87,5 +87,5 @@ export function HomepageFeatures(): JSX.Element {
         </div>
       </div>
     </section>
-  )
+  );
 }

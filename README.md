@@ -9,8 +9,8 @@ This repository is the source code for [this site](https://server-admin-docs.ver
 This website is built using [Docusaurus 2](https://docusaurus.io/)
 
 ```sh
-yarn
-yarn start
+npm
+npm start
 ```
 
 This command starts a local development server and opens up a browser window

@@ -1,11 +1,11 @@
-import { errToString } from '@site/src/lib/errToString'
-import React, { type ReactElement, type ReactNode } from 'react'
-import { type UseQueryResult } from '@tanstack/react-query'
-import Admonition from '@theme/Admonition'
+import { errToString } from '@site/src/lib/errToString';
+import React, { type ReactElement, type ReactNode } from 'react';
+import { type UseQueryResult } from '@tanstack/react-query';
+import Admonition from '@theme/Admonition';
 
 export interface QueryGuardProps<T = unknown> {
-  state: UseQueryResult<T>
-  children?: ReactNode | ((data: T) => ReactNode)
+  state: UseQueryResult<T>;
+  children?: ReactNode | ((data: T) => ReactNode);
 }
 
 /**
@@ -17,20 +17,20 @@ export function QueryGuard<T>(props: QueryGuardProps<T>): ReactElement {
       <Admonition type="info" title="Loading...">
         Please wait...
       </Admonition>
-    )
+    );
   } else if (props.state.isError) {
     return (
       <Admonition type="danger" title="Error">
         {errToString(props.state.error)}
       </Admonition>
-    )
+    );
   } else if (props.state.isSuccess) {
     if (typeof props.children === 'function') {
-      return <>{props.children(props.state.data)}</>
+      return <>{props.children(props.state.data)}</>;
     } else {
-      return <>{props.children}</>
+      return <>{props.children}</>;
     }
   } else {
-    return <>Unknown error</>
+    return <>Unknown error</>;
   }
 }

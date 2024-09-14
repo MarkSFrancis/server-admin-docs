@@ -6,6 +6,8 @@ authors: mark
 Today I chose to create this project, with a mix of documentation and a CLI in a monorepo structure.
 Hopefully, it'll prove easy to maintain.
 
+<!-- truncate -->
+
 ## Initial Concerns
 
 - Some of the links in here require the user to be on the same LAN as the server, as the services linked are not publicly exposed

@@ -12,6 +12,8 @@ This marks a pivot for this site to now document thoughts and configuration arou
 
 I will probably continue to document the thinking and changes I make in these blogs anyway, but that remains to be seen.
 
+<!-- truncate -->
+
 ## CLI Progress
 
 The CLI is now a private repository.
