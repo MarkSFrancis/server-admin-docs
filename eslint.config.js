@@ -1,11 +1,12 @@
-import eslint from '@eslint/js';
-import ts from 'typescript-eslint';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+const eslint = require('@eslint/js');
+const ts = require('typescript-eslint');
+const reactHooks = require('eslint-plugin-react-hooks');
+const reactRefresh = require('eslint-plugin-react-refresh');
+const globals = require('globals');
 
-export default ts.config(
+module.exports = ts.config(
   {
-    ignores: ['dist', 'node_modules', '.docusaurus'],
+    ignores: ['build', 'node_modules', '.docusaurus'],
   },
   eslint.configs.recommended,
   ...ts.configs.strictTypeChecked,
@@ -13,7 +14,7 @@ export default ts.config(
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: __dirname,
       },
     },
     rules: {
@@ -47,19 +48,15 @@ export default ts.config(
     files: ['**/*.js'],
     extends: [ts.configs.disableTypeChecked],
     languageOptions: {
+      // Until docusaurus supports ES modules
+      sourceType: 'commonjs',
+      globals: globals.node,
       parserOptions: {
         project: false,
       },
     },
-  },
-  {
-    files: ['**/*.cjs'],
-    extends: [ts.configs.disableTypeChecked],
-    languageOptions: {
-      sourceType: 'commonjs',
-      parserOptions: {
-        project: false,
-      },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
   {

@@ -1,7 +1,6 @@
 {
   "name": "server-admin-docs",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
   "engines": {
     "node": ">=20"
