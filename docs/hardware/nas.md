@@ -21,38 +21,28 @@ Unfortunately, the lack of [ECC (Error Correcting Memory)](https://en.wikipedia.
 ## Hardware
 
 :::info
-Check out the [TrueNAS CORE docs](https://www.truenas.com/docs/core/gettingstarted/corehardwareguide/) for its hardware requirements
+Check out the [TrueNAS SCALE docs](https://www.truenas.com/docs/scale/gettingstarted/scalehardwareguide/) for its hardware requirements
 :::
 
-| Component                       | Model                                                                                             |
-| ------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Case                            | Fractal Design Node 804                                                                           |
-| Motherboard                     | Gigabyte C246M-WU4 s1151 XEON                                                                     |
-| CPU                             | Intel Core i3 9100 s1151                                                                          |
-| RAM                             | 1x 16GB DDR4 2666MHz ECC RDIMM                                                                    |
-| HDD                             | 7x Seagate ST2000DM008 Barracuda 2TB <br/> 1x Seagate IronWolf 4TB (an upgrade is in progress...) |
-| Expansion card (HDD Controller) | BEYIMEI PCIe SATA Card (8 Port, 6 Gbit/s SATA 3.0, PCIe 4X)                                       |
-| USB drive (hosts the OS)        | 16GB SANDisk SDCZ43-016G-G46                                                                      |
+| Component                   | Model                                                                                                                                                                |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Case                        | QNAP TS-873A 804                                                                                                                                                     |
+| RAM                         | 2x 16GB DDR4 unbuffered ECC RAM ([KSM26SED8/32HC](https://www.kingstonmemoryshop.co.uk/kingston-ksm26sed8-32hc-32gb-ddr4-2666mt-s-ecc-unbuffered-ram-memory-sodimm)) |
+| HDDs (hosts the main share) | 8x Seagate BarraCuda 8TB HDDs (SATA 6 Gbit/s, 3.5", 5400RPM, 256MB Cache) ([ST8000DM004](https://www.amazon.co.uk/dp/B075WYBQXJ))                                    |
+| SSDs (hosts the OS)         | 2x WD Red 500GB NVMe SSD (M.2 2280 NVMe) ([SN700](https://www.amazon.co.uk/dp/B09H1SCQFQ))                                                                           |
+
+For more information on the hardware choices, check out [the NAS Replacement blog post](/blog/2024/08/31/qnap-purchase).
 
 ## Software
 
-I'm running [TrueNAS CORE](https://www.truenas.com/docs/core/).
+I'm running [TrueNAS SCALE](https://www.truenas.com/docs/scale/).
 
-### Why TrueNAS Core?
+### Why TrueNAS Scale?
 
 - Open Source
 - Free to use for personal and commercial use cases / data
 - Great community support
 - ZFS-by-default
+- Lunix-based
 - Extremely stable, with years of heritage
 - Actively maintained, with a company dedicated to building custom hardware for it
-- The OS itself can run from a USB stick, so there's no wasted pool space
-
-:::info
-At some point, I intend to pivot to running [TrueNAS SCALE](https://www.truenas.com/docs/scale/)
-
-- I think it's the future for the TrueNAS company
-- I'm much more familiar with Linux than FreeBSD (though FreeBSD is an excellent OS in its own right)
-- TrueNAS SCALE is much easier to scale horizontally (hence the name), so I can add more nodes in future, instead of a single point of failure
-- Unfortunately, TrueNAS SCALE has a much higher amount of disk I/O on the host disk, so I'd no longer be able to run the OS from a USB stick as I do now
-  :::
