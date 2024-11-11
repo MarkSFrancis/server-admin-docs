@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.6.1",
-    "@docusaurus/tsconfig": "^3.6.0",
+    "@docusaurus/tsconfig": "^3.6.1",
     "@types/node": "^22",
     "eslint": "^9.14.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
