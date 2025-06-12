@@ -34,7 +34,7 @@
     "@docusaurus/module-type-aliases": "3.8.1",
     "@docusaurus/tsconfig": "^3.8.1",
     "@types/node": "^24",
-    "@types/react": "^19.1.7",
+    "@types/react": "^19.1.8",
     "eslint": "^9.28.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
